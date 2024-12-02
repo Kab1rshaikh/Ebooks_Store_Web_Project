@@ -1,5 +1,5 @@
 <%@ page import="java.sql.Connection" %>
-<%@ page import="com.DB.DBConnect" %>
+<%@ page import="main.com.DB.DBConnect"%>
 
 <html>
 <head>
@@ -32,7 +32,7 @@ background-color:#edebeb;
 <%@include file="allComponent/navbar.jsp"%>
 
     <div class="container-fluid back-img mb-3">
-        <h2 class="text-center text-white pt-5 pr-5">Ebook Management System<h2>
+        <h2 class="text-center text-white pt-5 pr-5">Ebook Management System</h2>
 
 
     </div>

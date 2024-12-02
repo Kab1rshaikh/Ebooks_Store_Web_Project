@@ -1,4 +1,4 @@
-package com.DB; // Replace with your actual package name
+package main.com.DB; // Replace with your actual package name
 
 import java.sql.Connection;
 import java.sql.DriverManager;

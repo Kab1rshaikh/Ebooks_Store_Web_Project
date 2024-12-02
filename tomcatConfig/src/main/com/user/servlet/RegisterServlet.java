@@ -1,9 +1,9 @@
-package com.user.servlet;
+package main.com.user.servlet;
 
-import com.DAO.UserDAO;
-import com.DAO.UserDAOImpl;
-import com.DB.DBConnect;
-import com.entity.User;
+import main.com.DAO.UserDAO;
+import main.com.DAO.UserDAOImpl;
+import main.com.DB.DBConnect;
+import main.com.entity.User;
 
 import java.io.IOException;
 import java.io.PrintWriter;

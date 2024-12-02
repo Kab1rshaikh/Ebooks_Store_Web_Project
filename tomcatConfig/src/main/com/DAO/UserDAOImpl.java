@@ -1,6 +1,6 @@
-package com.DAO;
+package main.com.DAO;
 
-import com.entity.User;
+import main.com.entity.User;
 import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
 
 import java.sql.Connection;
@@ -8,13 +8,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDAOImpl implements UserDAO {
+public class UserDAOImpl implements main.com.DAO.UserDAO {
     private Connection conn;
 
     public UserDAOImpl(Connection conn) {
         super();
         this.conn = conn;
-
     }
 
 

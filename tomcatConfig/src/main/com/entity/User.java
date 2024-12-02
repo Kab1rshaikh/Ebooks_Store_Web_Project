@@ -1,4 +1,4 @@
-package com.entity;
+package main.com.entity;
 
 public class User {
     private int id;

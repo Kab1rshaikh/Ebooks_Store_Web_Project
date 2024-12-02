@@ -1,7 +1,7 @@
-package com.user.servlet;
+package main.com.user.servlet;
 
-import com.DAO.UserDAOImpl;
-import com.DB.DBConnect;
+import main.com.DAO.UserDAOImpl;
+import main.com.DB.DBConnect;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
