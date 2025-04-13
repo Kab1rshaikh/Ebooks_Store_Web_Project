@@ -1,7 +1,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false"%>
 <%@ page import="java.sql.Connection" %>
-<%@ page import="com.DB.DBConnect" %>
+<%@ page import="main.com.DB.DBConnect" %>
+<%@ page import="main.com.user.servlet.LoginServlet" %>
+<%@ page import="main.com.entity.User" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 

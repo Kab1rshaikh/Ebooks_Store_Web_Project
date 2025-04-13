@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false"%>
-<%@ page import="com.DAO.BookDAOImpl, com.entity.BookDtls, com.DB.DBConnect, java.util.List" %>
+<%@ page import="main.com.DAO.BookDAOImpl, main.com.entity.BookDtls, main.com.DB.DBConnect, java.util.List" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

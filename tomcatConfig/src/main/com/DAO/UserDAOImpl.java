@@ -1,12 +1,10 @@
 package main.com.DAO;
 
 import main.com.entity.User;
-import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class UserDAOImpl implements main.com.DAO.UserDAO {
     private Connection conn;
@@ -14,6 +12,7 @@ public class UserDAOImpl implements main.com.DAO.UserDAO {
     public UserDAOImpl(Connection conn) {
         super();
         this.conn = conn;
+
     }
 
 
@@ -42,23 +41,36 @@ public class UserDAOImpl implements main.com.DAO.UserDAO {
     }
 
     @Override
-    public boolean userLogin(String email, String password) {
-        boolean f=false;
-        String sql = "SELECT email, password FROM user WHERE email = ? AND password = ?";
+    public User userLogin(String email, String password) {
+        User us=null;
+        String sql = "SELECT * FROM user WHERE email = ? AND password = ?";
         try{
             PreparedStatement ps= conn.prepareStatement(sql);
             ps.setString(1,email);
             ps.setString(2,password);
 
+            System.out.println("PreparedStatement Email: " + ps.toString());
+
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 //System.out.println("User found: " + ((ResultSet) rs).getString("name"));
-                f=true;
+                us=new User();
+                us.setId(rs.getInt(1));
+                us.setname(rs.getString(2));
+                us.setEmail(rs.getString(3));
+                us.setPhno(rs.getString(4));
+                us.setPassword(rs.getString(5));
+                us.setAddress(rs.getString(6));
+                us.setLandmark(rs.getString(7));
+                us.setCity(rs.getString(8));
+                us.setState(rs.getString(9));
+                us.setPincode(rs.getString(10));
             }
         }catch (Exception e){
             e.printStackTrace();
         }
-        return f;
+
+        return us;
     }
 
 }

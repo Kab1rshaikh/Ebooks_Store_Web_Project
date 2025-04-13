@@ -4,6 +4,6 @@ import main.com.entity.User;
 
 public interface UserDAO {
     public boolean userRegister(User us);
-    public boolean userLogin(String email,String password);
+    public User userLogin(String email, String password);
 
 }
